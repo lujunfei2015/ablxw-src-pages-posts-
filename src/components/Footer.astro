@@ -1,0 +1,50 @@
+---
+import { SITE_TITLE, SITE_EMAIL } from "../consts";
+const { theme } = Astro.props;
+import { SITE_NAME } from "../consts";
+const date = new Date();
+const year = date.getFullYear();
+---
+
+<div class:list={["footer-main", { "footer-dark": theme === "dark" }]}>
+  <div class="content-body footer-wraper">
+    <div class="footer-box">
+      <div class="foot-nav">
+        <div class="foot-nav-items">
+          <div class="item">
+            <div class="logo">{SITE_TITLE}</div>
+            <div class="email">Email: {SITE_EMAIL}</div>
+          </div>
+
+          <div class="item products">
+            <div class="item-title">作品</div>
+           
+            <a href="https://tyseoer.com" target="_blank">阿波罗公关咨询</a>
+            <a href="https://sf.tyseoer.com" target="_blank">阿波罗刷粉平台</a>
+            <a href="http://mj.tyseoer.com" target="_blank">阿波罗发稿平台</a>
+            <a href="http://lg.tyseoer.com" target="_blank">阿波罗接单平台</a>
+            <a href="https://axl.tyseoer.com" target="_blank">阿修罗物联网卡</a>
+            
+          </div>
+
+          <div class="item community">
+            <div class="item-title">官网</div>
+            <a href="https://tyseoer.com/" target="_blank">阿波罗公关咨询</a>
+
+          </div>
+
+          <div class="item resources">
+            <div class="item-title">友链</div>
+            <a href="https://tyseoer.com/">阿波罗公关咨询</a>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="copyright">
+          &copy; {`2018-${year}  ${SITE_NAME}`} 
+          <a href="//tyseoer.com/">阿波罗公关咨询</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
